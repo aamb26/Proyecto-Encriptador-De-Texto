@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link id="claro" rel="stylesheet" href="style.css">
+    <!--Modo oscuro-->
+    <link id="oscuro" rel="stylesheet" href="modo-oscuro.css">
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!--Fuente de encabezado-->
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <!--Fuente cuerpo-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <title>Encriptador de texto</title>
+</head>
+
+<body>
+    <header class="encabezado">
+
+
+        <img src="Imagenes/logo.png" alt="logo">
+        <h1 class="titulo">Encriptador de texto</h1>
+        <div class="modo">
+            <button id="btn-MO" onclick=cambiarTema()>Cambiar tema</button>
+        </div>
+    </header>
+    <main class="cuerpo">
+        <div class="condiciones">
+            <p class="mensaje">&#9888; No se permite el uso de letras mayuscúlas, acentos o caracteres especiales.</p>
+        </div>
+        <div class="contenedor">
+
+            <div class="iconos">
+                <i title="copiar resultado" class="bi bi-clipboard" onclick=copiar()></i>
+                <i title="Borrar todo" class="bi bi-trash" onclick=borrarTodo()></i>
+
+            </div>
+
+            <div class="marco">
+
+                <div class="cajas_texto">
+                    <textarea name="texto" class="texto" id="escribir_mensaje"
+                        placeholder="Escriba un mensaje"></textarea>
+                    <textarea name="resultado" class="resultado" id="resultado" placeholder="Resultado"
+                        readonly="true"></textarea>
+                </div>
+
+                <div class="controles">
+
+                    <label for="radio_encriptar"><input type="radio" name="opciones" id="radio_encriptar"
+                            value="encriptar">Encriptar</label>
+                    <label for="radio_desencriptar"><input type="radio" name="opciones" id="radio_desencriptar"
+                            value="desencriptar">Desencriptar</label>
+                </div>
+
+            </div>
+
+            <div class="boton">
+                <button id="btn-ejecutar" onclick="ejecutar()">Ejecutar</button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <section class="footer-contenedor">
+            <p class="derechos">&copy Copyright Adriana Montejo Borrás</p>
+            <div class="footer-cuentas">
+                <a href="https://www.linkedin.com/in/adriana-montejo-borr%C3%A1s-33378a275/" target="_blank"><i
+                        class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/aamb26" target="_blank"><i class="bbi bi-github"></i></a>
+                <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><i class="bi bi-envelope-at"></i></a>
+            </div>
+
+        </section>
+    </footer>
+
+</body>
+<script src="index.js"></script>
+<script src="herramientas.js"></script>
+<script src="modo-oscuro.js"></script>
+
+</html>
