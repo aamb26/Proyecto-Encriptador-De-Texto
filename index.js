@@ -14,7 +14,7 @@ function ejecutar() {
 }
 
 function encriptar(texto) {
-    if (/([A-ZÁ-Ú])|([á-ú])|([0-9])|([!-/])|([:-@])|([\[-\\'])|([{-¥])/g.test(texto)) {
+    if (/([^\S-$\S])|([A-ZÁ-Ú])|([á-ú])|([0-9])|([!-/])|([:-@])|([\[-\\'])|([{-¥])/g.test(texto)) {
         return resultado.textContent = "Solo se permiten letras minúsculas";
     }
 
